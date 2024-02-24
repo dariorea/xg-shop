@@ -73,8 +73,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if(cantidadArticulos === 0) {
             document.getElementById("carrito-art").classList.remove("oculto");
             document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
-     
-         }
+
+        }
         cantidadArticulos++;
         carritoElemento.textContent = cantidadArticulos;
     
@@ -87,6 +87,34 @@ document.addEventListener("DOMContentLoaded", function() {
     if(cantidadArticulos > 0) {
         // carritoElemento.classList.remove("oculto");
         document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
- 
-     }
+    }
+
+    fetch('usuarios.json')
+    .then(response => response.json())
+    .then(data => {
+    const contenedor = document.getElementById('contenedor');
+
+    data.forEach(item => {
+        const productoDiv = document.createElement('div');
+             // Crear un elemento de imagen y establecer su atributo src con la URL de la imagen
+            const imagen = document.createElement('img');
+            const carpeta = "./imagenes/"
+            imagen.src = `${carpeta}${item.image}`;
+
+            // Crear elementos de texto para mostrar el nombre y el precio del producto
+            const nombreProducto = document.createElement('p');
+            nombreProducto.textContent = `Nombre: ${item.name}`;
+            const precioProducto = document.createElement('p');
+            precioProducto.textContent = `Precio: ${item.price}`;
+
+            // Agregar elementos al contenedor del producto
+            productoDiv.appendChild(imagen);
+            productoDiv.appendChild(nombreProducto);
+            productoDiv.appendChild(precioProducto);
+
+             // Agregar el producto al contenedor principal
+            contenedor.appendChild(productoDiv);
+    });
+    })
+    .catch(error => console.error('Error cargando el archivo JSON:', error));
 });
