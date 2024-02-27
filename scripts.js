@@ -40,72 +40,76 @@
 //    });
 
 document.addEventListener("DOMContentLoaded", function() {
-    const numeroElemento = document.getElementById('numeros');
-    const masBoton = document.getElementById('mas');
-    const menosBoton = document.getElementById('menos');
-    const botonCarrito = document.getElementById('boton');
-    const carritoElemento = document.getElementById('carrito-art');
-
-
-    let cantidadArticulos = 0;
-    let cantidadProductos = 0;
-
-
-
-    function actualizarNumero(valor) {
-        numeroElemento.textContent = valor;
-    }
-
-    function incrementarNumero() {
-        cantidadProductos++;
-        actualizarNumero(cantidadProductos);
-    }
-
-    function decrementarNumero() {
-        if (cantidadProductos > 1) {
-            cantidadProductos--;
-            actualizarNumero(cantidadProductos);
-
-        }
-    }
-
-    function agregarAlCarrito() {
-        if(cantidadArticulos === 0) {
-            document.getElementById("carrito-art").classList.remove("oculto");
-            document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
-
-        }
-        cantidadArticulos++;
-        carritoElemento.textContent = cantidadArticulos;
-    
-    }
-
-    masBoton.addEventListener("click", incrementarNumero);
-    menosBoton.addEventListener("click", decrementarNumero);
-    botonCarrito.addEventListener("click", agregarAlCarrito);
-
-    if(cantidadArticulos > 0) {
-        // carritoElemento.classList.remove("oculto");
-        document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
-    }
+ //   const numeroElemento = document.getElementById('numeros');
+ //   const masBoton = document.getElementById('mas');
+ //   const menosBoton = document.getElementById('menos');
+ //   const botonCarrito = document.getElementById('boton');
+ //   const carritoElemento = document.getElementById('carrito-art');
+//
+//
+ //   let cantidadArticulos = 0;
+ //   let cantidadProductos = 0;
+//
+//
+//
+ //   function actualizarNumero(valor) {
+ //       numeroElemento.textContent = valor;
+ //   }
+//
+ //   function incrementarNumero() {
+ //       cantidadProductos++;
+ //       actualizarNumero(cantidadProductos);
+ //   }
+//
+ //   function decrementarNumero() {
+ //       if (cantidadProductos > 1) {
+ //           cantidadProductos--;
+ //           actualizarNumero(cantidadProductos);
+//
+ //       }
+ //   }
+//
+ //   function agregarAlCarrito() {
+ //       if(cantidadArticulos === 0) {
+ //           document.getElementById("carrito-art").classList.remove("oculto");
+ //           document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
+//
+ //       }
+ //       cantidadArticulos++;
+ //       carritoElemento.textContent = cantidadArticulos;
+ //   
+ //   }
+//
+ //   masBoton.addEventListener("click", incrementarNumero);
+ //   menosBoton.addEventListener("click", decrementarNumero);
+ //   botonCarrito.addEventListener("click", agregarAlCarrito);
+//
+ //   if(cantidadArticulos > 0) {
+ //       // carritoElemento.classList.remove("oculto");
+ //       document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
+ //   }
 
     fetch('usuarios.json')
     .then(response => response.json())
     .then(data => {
-    const contenedor = document.getElementById('contenedor');
+    const contenedor = document.getElementById('row');
 
     data.forEach(item => {
         const productoDiv = document.createElement('div');
+        productoDiv.classList.add('col-xxl-3', 'col-sm-12', 'col-md-6', 'col-lg-4', 'element', 'g-3')
+
              // Crear un elemento de imagen y establecer su atributo src con la URL de la imagen
             const imagen = document.createElement('img');
             const carpeta = "./imagenes/"
             imagen.src = `${carpeta}${item.image}`;
 
             // Crear elementos de texto para mostrar el nombre y el precio del producto
-            const nombreProducto = document.createElement('p');
-            nombreProducto.textContent = `Nombre: ${item.name}`;
-            const precioProducto = document.createElement('p');
-            precioProducto.textContent = `Precio: ${item.price}`;
+            const nombreProducto = document.createElement('a');
+            nombreProducto.href = `producto.html?id=${item.id}`;
+            nombreProducto.textContent = `${item.name}`;
+            const precioProducto = document.createElement('a');
+            precioProducto.href = `/${item.id}`
+            precioProducto.textContent = `${item.price}`;
 
             // Agregar elementos al contenedor del producto
             productoDiv.appendChild(imagen);

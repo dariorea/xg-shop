@@ -19,7 +19,7 @@
     {
       "id": 3,
       "image": "toalla.webp",
-      "name": "",
+      "name": "ALPHAZ LIMITED Sports Towel",
       "price": "¥2.364",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "image": "buzo.webp",
+      "image": "buzoXGXG.webp",
       "name": "Pigment Dyed Pullover Hoodie",
       "price": "¥9.000",
       "code": "SKU: XGLX-0040",
@@ -44,7 +44,7 @@
       "id": 6,
       "image": "pantalon.webp",
       "name": "Pigment Dyed Sweat Pants",
-      "price": "8.000",
+      "price": "¥8.000",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "image": "guccimaze.webp",
       "name": "XG × GUCCIMAZE Long Sleeve Tee",
-      "price": "6.900",
+      "price": "¥6.900",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "image": "reme-rosa.webp",
       "name": "Crew Neck Tee / PURPLE",
-      "price": "4.500",
+      "price": "¥4.500",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "image": "medias.webp",
       "name": "2-PACK Socks / WHITE",
-      "price": "3.000",
+      "price": "¥3.000",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "image": "vaso.webp",
       "name": "STTOKE Reusable Cup GRANDE / Midnight Black",
-      "price": "7.500",
+      "price": "¥7.500",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -84,7 +84,7 @@
       "id": 11,
       "image": "cuelga-vaso.webp",
       "name": "Tumbler Handle Sleeve",
-      "price": "3.600",
+      "price": "¥3.600",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -92,7 +92,7 @@
       "id": 12,
       "image": "bounce.webp",
       "name": "Bouncy Ball ( 2PCS )",
-      "price": "1.500",
+      "price": "¥1.500",
       "code": "SKU: XGLX-0040",
       "release": "October 20, 2023"
     },
@@ -100,15 +100,15 @@
       "id": 13,
       "image": "facecover.webp",
       "name": "Face Covering",
-      "price": "2.800",
+      "price": "¥2.800",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
     {
       "id": 14,
-      "image": "disco.webp",
+      "image": "disco-xg.webp",
       "name": "Flying Disc",
-      "price": "1.800",
+      "price": "¥1.800",
       "code": "SKU: XGLX-0040",
       "release": "October 13, 2023"
     },
@@ -116,7 +116,7 @@
       "id": 15,
       "image": "chain.webp",
       "name": "XG Charm Chain Shoulder Strap",
-      "price": "3.900",
+      "price": "¥3.900",
       "code": "SKU: XGLX-0040",
       "release": "October 3, 2023"
     },
@@ -124,7 +124,7 @@
       "id": 16,
       "image": "mascara.webp",
       "name": "MASCARA",
-      "price": "1.650",
+      "price": "¥1.650",
       "code": "SKU: XGLX-0040",
       "release": "October 31, 2023"
     },
@@ -132,7 +132,7 @@
       "id": 17,
       "image": "shootings-stars.webp",
       "name": "SHOOTING STAR",
-      "price": "1.980",
+      "price": "¥1.980",
       "code": "SKU: XGLX-0040",
       "release": "October 9, 2023"
     },
@@ -140,7 +140,7 @@
       "id": 18,
       "image": "season-greetings.webp",
       "name": "XG 2023 SEASON'S GREETINGS",
-      "price": "4.900",
+      "price": "¥4.900",
       "code": "SKU: XGLX-0040",
       "release": "October 10, 2023"
     }
