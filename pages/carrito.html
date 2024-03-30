@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/carrito.css">
+    <title>Your Shopping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header >
+        <nav class="contenedor-nav">
+            <div class="cont">
+                <i id="treslineas" class="bi bi-list contenedor-nav-iconos"></i>
+            </div>
+            <a href="../index.html"><img src="../imagenes/logo-xg-shop-black_1.avif" alt="logo-xg"></a>
+            <div class="cont">
+                <i class="bi bi-person-fill contenedor-nav-iconos"></i>
+                <a href="./carrito.html">
+                    <i class="contenedor-nav-iconos bi bi-cart-fill"></i>
+                </a>
+                <div class="oculto">
+                    <p id="carrito-art"> </p>  
+                </div>
+            </div>
+        </nav>
+        <div id="options" class="options">
+            <div class="contenedor-x">
+                <i id="equi" class=" bi bi-x-lg"></i>
+            </div>
+            <ul>
+                <li class="option-li"><a href="../index.html">ALL ITEMS</a></li>
+                
+                <li class="option-li">SEARCH</li>
+            </ul>
+            <div class="contenedor-category">
+                <h4>CATEGORY</h4>
+            </div>
+            <ul>
+                <li class="option-li"><a href="./musica.html">MUSICA</a></li>
+                
+                <li class="option-li"><a href="./merch.html">MERCHANDISE</a></li>
+            
+                <li class="option-li"><a href="./season.html">XG 2024 SEASON'S GREETINS</a></li>
+                
+                <li class="option-li"><a href="#">XG 'NEW DNA' SHOWCASE in JAPAN MERCHANDISE</a></li>
+            </ul>
+            <div class="contenedor-category">
+                <h4>ACCOUNT</h4>
+            </div>
+            <ul>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Create Account</a></li>
+            </ul>
+        </div>
+    </header>
+        <div class="container-fluid">
+            <div class="titulo"></div>
+            <div class="shopping">
+                <h1>Shopping Cart</h1>       
+            </div>
+            <main id="container" class="container-fluid">
+                <div class="row" id="valores">
+                    <div class="col-6 detalles-titulo"></div>
+                    <div class="col-2 detalles-titulo"><p>Price</p></div>
+                    <div class="col-2 detalles-titulo"><p>Quantity</p></div>
+                    <div class="col-2 detalles-titulo"><p>Total</p></div>
+                </div>
+
+                <div id="sub" class="contenedor-sub">
+
+                </div>
+
+            </main>
+        </div>
+
+        <footer class="container-footer text-center">
+            
+            <div class="new-dance">
+                <h3>SIGN UP FOR UPDATES FROM XG</h3>
+                <p>Emails will be sent by XG OFFICIAL SHOP.<br>You may withdraw your consent at any time. See <a href="https://shop.xgalx.com/policies/privacy-policy">Privacy Policy </a>and <a href="https://shop.xgalx.com/policies/terms-of-service">Terms of service</a> .</p>
+                <input type="email" id="correo" name="correo" placeholder="ENTER YOUR EMAIL ADDRESS" required>
+                <button>SIGN UP</button>
+
+            </div>
+
+            <div class="puppet">
+                <ul>
+                    <li> <a class="enlace" href="#">Guide</a></li>
+                    <li> <a class="enlace" href="#">Notes</a></li>
+                    <li> <a class="enlace" href="#">Contact Us</a></li>
+                </ul>
+                <ul>
+                    <li>  <a class="enlace" href="#">Terms</a></li>
+                    <li>  <a class="enlace" href="#">Privacy</a></li>
+                    <li>  <a class="enlace" href="#">Legal Notice</a></li>
+                    <li>  <a class="enlace" href="#">Shipping Police</a></li>
+                    <li>  <a class="enlace" href="#">Do Not Sell My Personal Information</a></li>
+                </ul>
+            </div>
+            <div class="iconos-footer">
+                <i class="bi bi-instagram espacio"></i>
+                <i class="bi bi-facebook espacio"></i>
+                <i class="bi bi-youtube espacio"></i>
+                <i class="bi bi-twitter espacio"></i>
+            </div>
+
+        </div>
+
+        
+    </footer>
+
+    <script src="../scripts/carrito.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

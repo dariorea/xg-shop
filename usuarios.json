@@ -1,152 +1,275 @@
 
 [
-    {
-      "id": 1,
-      "image": "remera.webp",
-      "name": "2-PACK Crew Neck Tee / BLK & WHT",
-      "price": "¥7.727",
-      "code": "SKU: XGLX-0040",
-      "release": "November 13, 2023"
-    },
-    {
-      "id": 2,
-      "image": "pulover.webp",
-      "name": "Nylon Pullover JKT",
-      "price": "¥10.909",
-      "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
-    },
-    {
-      "id": 3,
-      "image": "toalla.webp",
-      "name": "ALPHAZ LIMITED Sports Towel",
-      "price": "¥2.364",
-      "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
-    },
+  {
+    "id": 1,
+    "image": "season-greetings-2024.webp",
+    "imagehover": "season-greetings-2024-dos.webp",
+    "name": "《2-item set》XG 2024 SEASON'S GREETINGS（Standard Edition）+（Special Edition）",
+    "price": "15273",
+    "code": "SKU: XGLX-0040",
+    "release": "December 26, 2024",
+    "tipo": "season"
+  },
+  {
+    "id": 2,
+    "image": "season-greetings-2024-standar.webp",
+    "imagehover": "season-greetings-2024-standar-dos.webp",
+    "name": "XG 2024 SEASON'S GREETINGS（Standard Edition）",
+    "price": "10909",
+    "code": "SKU: XGLX-0040",
+    "release": "December 26, 2024",
+    "tipo": "season"
+  },
+  {
+    "id": 3,
+    "image": "reloj.webp",
+    "imagehover": "reloj-dos.webp",
+    "name": "【Overseas Delivery Not Available】XG Wristband Light 'NEW DNA' SHOWCASE Edition（w/XG Trading Card）",
+    "price": "2545",
+    "code": "SKU: XGLX-0040",
+    "release": "November 13, 2023",
+    "tipo": "merch"
+  },
     {
       "id": 4,
-      "image": "gorrito.webp",
-      "name": "Bucket Hat",
-      "price": "¥6.500",
+      "image": "remera.webp",
+      "imagehover": "remera-dos.jpg",
+      "name": "【Build-To-Order】Crew Neck Tee / BLK",
+      "price": "7727",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "November 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 5,
-      "image": "buzoXGXG.webp",
-      "name": "Pigment Dyed Pullover Hoodie",
-      "price": "¥9.000",
+      "image": "pulover.webp",
+      "imagehover": "pulover-dos.webp",
+      "name": "Nylon Pullover JKT",
+      "price": "10909",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 6,
-      "image": "pantalon.webp",
-      "name": "Pigment Dyed Sweat Pants",
-      "price": "¥8.000",
+      "image": "toalla.webp",
+      "imagehover": "toalla-dos.jpg",
+      "name": "ALPHAZ LIMITED Sports Towel",
+      "price": "2364",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "merch"
     },
     {
       "id": 7,
-      "image": "guccimaze.webp",
-      "name": "XG × GUCCIMAZE Long Sleeve Tee",
-      "price": "¥6.900",
+      "image": "remera-blanca.webp",
+      "imagehover": "remera-blanca-dos.webp",
+      "name": "【Build-To-Order】Crew Neck Tee / WHT",
+      "price": "7727",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "March 13, 2023",
+      "tipo": "ropa"
     },
+
     {
       "id": 8,
-      "image": "reme-rosa.webp",
-      "name": "Crew Neck Tee / PURPLE",
-      "price": "¥4.500",
+      "image": "gorrito.webp",
+      "imagehover": "gorrito-dos.webp",
+      "name": "Bucket Hat",
+      "price": "6500",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "merch"
     },
     {
       "id": 9,
-      "image": "medias.webp",
-      "name": "2-PACK Socks / WHITE",
-      "price": "¥3.000",
+      "image": "buzoXGXG.webp",
+      "imagehover": "buzo-dos.webp",
+      "name": "Pigment Dyed Pullover Hoodie",
+      "price": "9000",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 10,
-      "image": "vaso.webp",
-      "name": "STTOKE Reusable Cup GRANDE / Midnight Black",
-      "price": "¥7.500",
+      "image": "pantalon.webp",
+      "imagehover": "pantalon-dos.webp",
+      "name": "Pigment Dyed Sweat Pants",
+      "price": "8000",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 11,
-      "image": "cuelga-vaso.webp",
-      "name": "Tumbler Handle Sleeve",
-      "price": "¥3.600",
+      "image": "guccimaze.webp",
+      "imagehover": "guccimaze-dos.webp",
+      "name": "【Build-To-Order】XG × GUCCIMAZE Long Sleeve Tee",
+      "price": "6900",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 12,
-      "image": "bounce.webp",
-      "name": "Bouncy Ball ( 2PCS )",
-      "price": "¥1.500",
+      "image": "remera-rosa-pack.webp",
+      "imagehover": "reme-rosa.webp",
+      "name": "【Build-To-Order】Crew Neck Tee / PURPLE",
+      "price": "4500",
       "code": "SKU: XGLX-0040",
-      "release": "October 20, 2023"
+      "release": "October 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 13,
-      "image": "facecover.webp",
-      "name": "Face Covering",
-      "price": "¥2.800",
+      "image": "medias.webp",
+      "imagehover": "medias-dos.webp",
+      "name": "2-PACK Socks / WHITE",
+      "price": "3000",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "ropa"
     },
     {
       "id": 14,
-      "image": "disco-xg.webp",
-      "name": "Flying Disc",
-      "price": "¥1.800",
+      "image": "vaso.webp",
+      "imagehover": "vasito-solo.webp",
+      "name": "STTOKE Reusable Cup GRANDE / Midnight Black",
+      "price": "7500",
       "code": "SKU: XGLX-0040",
-      "release": "October 13, 2023"
+      "release": "October 13, 2023",
+      "tipo": "merch"
     },
     {
       "id": 15,
+      "image": "cuelga-vaso-dos.webp",
+      "imagehover": "cuelga-vaso.webp",
+      "name": "Tumbler Handle Sleeve",
+      "price": "3600",
+      "code": "SKU: XGLX-0040",
+      "release": "October 13, 2023",
+      "tipo": "merch"
+    },
+    {
+      "id": 16,
+      "image": "bounce.webp",
+      "imagehover": "bounce-dos.webp",
+      "name": "Bouncy Ball ( 2PCS )",
+      "price": "1500",
+      "code": "SKU: XGLX-0040",
+      "release": "October 20, 2023",
+      "tipo": "merch"
+    },
+    {
+      "id": 17,
+      "image": "facecover.webp",
+      "imagehover": "facecover-dos.webp",
+      "name": "Face Covering",
+      "price": "2800",
+      "code": "SKU: XGLX-0040",
+      "release": "October 13, 2023",
+      "tipo": "merch"
+    },
+    {
+      "id": 18,
+      "image": "disco-xg.webp",
+      "imagehover": "disco-dos.webp",
+      "name": "Flying Disc",
+      "price": "1800",
+      "code": "SKU: XGLX-0040",
+      "release": "October 13, 2023",
+      "tipo": "merch"
+    },
+    {
+      "id": 19,
       "image": "chain.webp",
+      "imagehover": "chain-dos.webp",
       "name": "XG Charm Chain Shoulder Strap",
-      "price": "¥3.900",
+      "price": "3900",
       "code": "SKU: XGLX-0040",
       "release": "October 3, 2023"
     },
     {
-      "id": 16,
+      "id": 20,
       "image": "mascara.webp",
+      "imagehover": "mascara-dos.webp",
       "name": "MASCARA",
-      "price": "¥1.650",
+      "price": "1650",
       "code": "SKU: XGLX-0040",
-      "release": "October 31, 2023"
+      "release": "October 31, 2023",
+      "tipo": "musica"
     },
     {
-      "id": 17,
+      "id": 21,
       "image": "shootings-stars.webp",
+      "imagehover": "shootings-stars-dos.webp",
       "name": "SHOOTING STAR",
-      "price": "¥1.980",
+      "price": "1980",
       "code": "SKU: XGLX-0040",
-      "release": "October 9, 2023"
+      "release": "October 9, 2023",
+      "tipo": "musica"
     },
     {
-      "id": 18,
-      "image": "season-greetings.webp",
+      "id": 22,
+      "image": "season-greetings-dos.webp",
+      "imagehover": "season-greetings.webp",
       "name": "XG 2023 SEASON'S GREETINGS",
-      "price": "¥4.900",
+      "price": "4900",
       "code": "SKU: XGLX-0040",
-      "release": "October 10, 2023"
+      "release": "October 10, 2023",
+      "tipo": "season"
+    },
+    {
+      "id": 23,
+      "image": "new-dna.webp",
+      "imagehover": "new-dna-dos.webp",
+      "name": "【General sales】NEW DNA【X ver.】",
+      "price": "3540",
+      "code": "SKU: XGLX-0040",
+      "release": "September 27, 2023",
+      "tipo": "musica"
+    },
+    {
+      "id": 24,
+      "image": "new-dna-xg.webp",
+      "imagehover": "new-dna-xg-dos.webp",
+      "name": "【General sales】《2-item set》NEW DNA【X ver.】【G ver.】",
+      "price": "6900",
+      "code": "SKU: XGLX-0040",
+      "release": "September 27, 2023",
+      "tipo": "musica"
+    },
+    {
+      "id": 25,
+      "image": "new-dna-gver.webp",
+      "imagehover": "new-dna-gver-dos.webp",
+      "name": "【General sales】NEW DNA【G ver.】",
+      "price": "3540",
+      "code": "SKU: XGLX-0040",
+      "release": "September 27, 2023",
+      "tipo": "musica"
+    },
+    {
+      "id": 26,
+      "image": "tippytoes-vinilo.webp",
+      "imagehover": "tippytoes-vinilo-dos.webp",
+      "name": "Tippy Toes(VINYL)",
+      "price": "1980",
+      "code": "SKU: XGLX-0040",
+      "release": "March 28, 2022",
+      "tipo": "musica"
+    },
+    {
+      "id": 27,
+      "image": "tippytoes-box.webp",
+      "imagehover": "tippytoes-box-dos.webp",
+      "name": "Tippy Toes(CD BOX)",
+      "price": "1650",
+      "code": "SKU: XGLX-0040",
+      "release": "March 28, 2022",
+      "tipo": "musica"
     }
-    
-    
-
 
     
     

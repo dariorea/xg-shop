@@ -1,124 +1,106 @@
-//document.addEventListener("DOMContentLoaded", function() {
-//        // El DOM ha sido completamente cargado, ahora puedes realizar cambios en él
-//
-//
-//        
-//            let numero = document.getElementById('numeros')
-//            let mas = document.getElementById('mas')
-//            let menos = document.getElementById('menos')
-//            let numeros = 1;
-//            const boton = document.getElementById('boton')
-// 
-//            let articulos = 0
-//
-//
-//
-//            
-//            // Agregar un evento de clic al botón
-//            menos.addEventListener("click", function(){
-//                if(numeros > 1) {
-//                    numeros--
-//                }
-//                numero.textContent = numeros
-//            });
-//            mas.addEventListener("click", function() {
-//                // Aumentar el número en 1 cada vez que se haga clic en el botón
-//                numeros++;
-//                // Mostrar el número actualizado en el elemento de resultado
-//                numero.textContent = numeros;
-//            });
-//            function addCar() {
-//                articulos++
-//                document.getElementById('carrito-art').textContent = articulos
-//            }
-//       
-//
-//
-//           boton.addEventListener("click", addCar);        
-//
-//
-//    });
-
 document.addEventListener("DOMContentLoaded", function() {
- //   const numeroElemento = document.getElementById('numeros');
- //   const masBoton = document.getElementById('mas');
- //   const menosBoton = document.getElementById('menos');
- //   const botonCarrito = document.getElementById('boton');
- //   const carritoElemento = document.getElementById('carrito-art');
-//
-//
- //   let cantidadArticulos = 0;
- //   let cantidadProductos = 0;
-//
-//
-//
- //   function actualizarNumero(valor) {
- //       numeroElemento.textContent = valor;
- //   }
-//
- //   function incrementarNumero() {
- //       cantidadProductos++;
- //       actualizarNumero(cantidadProductos);
- //   }
-//
- //   function decrementarNumero() {
- //       if (cantidadProductos > 1) {
- //           cantidadProductos--;
- //           actualizarNumero(cantidadProductos);
-//
- //       }
- //   }
-//
- //   function agregarAlCarrito() {
- //       if(cantidadArticulos === 0) {
- //           document.getElementById("carrito-art").classList.remove("oculto");
- //           document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
-//
- //       }
- //       cantidadArticulos++;
- //       carritoElemento.textContent = cantidadArticulos;
- //   
- //   }
-//
- //   masBoton.addEventListener("click", incrementarNumero);
- //   menosBoton.addEventListener("click", decrementarNumero);
- //   botonCarrito.addEventListener("click", agregarAlCarrito);
-//
- //   if(cantidadArticulos > 0) {
- //       // carritoElemento.classList.remove("oculto");
- //       document.getElementById("carrito-art").classList.add("mostrar");  // Agregar la clase "mostrar" que muestra el elemento
- //   }
-
+    function cargarCarritoDesdeLocalStorage() {
+        const carritoGuardado = localStorage.getItem('carrito');
+        if (carritoGuardado) {
+            carrito = JSON.parse(carritoGuardado);
+            const carritoIcon = document.getElementById('carrito-art')
+            carritoIcon.textContent = carrito.length
+          //  mostrarProductosEnCarrito();
+        }
+    }
     fetch('usuarios.json')
     .then(response => response.json())
     .then(data => {
     const contenedor = document.getElementById('row');
+    cargarCarritoDesdeLocalStorage()
 
     data.forEach(item => {
-        const productoDiv = document.createElement('div');
-        productoDiv.classList.add('col-xxl-3', 'col-sm-12', 'col-md-6', 'col-lg-4', 'element', 'g-3')
-
-             // Crear un elemento de imagen y establecer su atributo src con la URL de la imagen
+        if(item.id < 17) {
+            const productoDiv = document.createElement('div');
+            const imagenEnlace = document.createElement('a')
+            imagenEnlace.href = `../pages/producto.html?id=${item.id}`
+            productoDiv.classList.add('col-xxl-3', 'col-sm-6', 'col-md-6', 'col-lg-4', 'element', 'g-3', 'p-0')
+            const imgContainer = document.createElement('div')
+            imgContainer.classList.add('img-conteiner')
+         // Crear un elemento de imagen y establecer su atributo src con la URL de la imagen
             const imagen = document.createElement('img');
-            const carpeta = "./imagenes/"
-            imagen.src = `${carpeta}${item.image}`;
+            imagen.src = `./imagenes/${item.image}`;
+            imagen.alt = item.name
+            imagen.classList.add('img-visible')
+            const imagenHover = document.createElement('img');
+            imagenHover.src = `./imagenes/${item.imagehover}`;
+            imagenHover.alt = item.name
+            
+            imgContainer.appendChild(imagen)
+            imgContainer.appendChild(imagenHover)
 
-            // Crear elementos de texto para mostrar el nombre y el precio del producto
-            const nombreProducto = document.createElement('a');
-            nombreProducto.href = `producto.html?id=${item.id}`;
-            nombreProducto.textContent = `${item.name}`;
-            const precioProducto = document.createElement('a');
-            precioProducto.href = `/${item.id}`
-            precioProducto.textContent = `${item.price}`;
+            imagenEnlace.appendChild(imgContainer)
+      
+                imagenHover.classList.add('img-ocult')
+                // Crear elementos de texto para mostrar el nombre y el precio del producto
+                const nombreProducto = document.createElement('a');
+                nombreProducto.href = `../pages/producto.html?id=${item.id}`;
+                nombreProducto.textContent = item.name;
+                // Agregar manejadores de eventos para detectar cuando el cursor pasa sobre las imágenes
+                imagenEnlace.addEventListener('mouseenter', () => {
+                    // Ocultar imagen1 cambiando su opacidad a 0 y la de imagen2 a 1
+                    imagen.style.opacity = '0';
+                    imagenHover.style.opacity = '1';
+                });
+                imagenEnlace.addEventListener('mouseleave', () => {
+                    // Ocultar imagen2 cambiando su opacidad a 0 y la de imagen1 a 1
+                    imagen.style.opacity = '1';
+                    imagenHover.style.opacity = '0';
+                });
+                const precioProducto = document.createElement('a');
+                precioProducto.href = `../pages/producto.html?id=${item.id}`;
+                precioProducto.textContent = `¥${item.price}`;
 
-            // Agregar elementos al contenedor del producto
-            productoDiv.appendChild(imagen);
-            productoDiv.appendChild(nombreProducto);
-            productoDiv.appendChild(precioProducto);
-
-             // Agregar el producto al contenedor principal
-            contenedor.appendChild(productoDiv);
+                // Agregar elementos al contenedor del producto
+                productoDiv.appendChild(imagenEnlace);
+                productoDiv.appendChild(nombreProducto);
+                productoDiv.appendChild(precioProducto);
+                productoDiv.classList.add('producto-div')
+                 // Agregar el producto al contenedor principal
+                contenedor.appendChild(productoDiv);    
+            }
+            
     });
+    const allItemsEnlace = document.createElement('a')
+    allItemsEnlace.href = `../pages/allItems.html`
+    const contview = document.getElementById('viewAll')
+    const viewAll = document.createElement('button')
+
+    viewAll.textContent = 'view all'
+    viewAll.classList.add('boton')
+
+    allItemsEnlace.appendChild(viewAll)
+    contview.appendChild(allItemsEnlace)
+    // Agregar manejadores de eventos para detectar cuando el cursor pasa sobre las imágenes
+    const equi = document.getElementById('equi')
+    const options = document.getElementById('options')
+    const tres = document.getElementById('treslineas')
+  //  const animated = document.getElementsByClassName('animated')
+
+    tres.addEventListener('click', () =>{
+        options.style.display = 'block';
+        document.body.classList.add("no-scroll");
+        options.classList.remove('animated')
+        options.classList.remove('fadeOutLeft')
+        options.classList.add('animated')
+        options.classList.add('fadeInLeft')
+
+        
+    })
+    equi.addEventListener('click', ()=>{
+        document.body.classList.remove("no-scroll");
+       // options.style.display = 'none';
+        options.classList.remove('animated')
+        options.classList.remove('fadeInLeft')
+        options.classList.add('animated')
+        options.classList.add('fadeOutLeft')
+    })
+    
     })
     .catch(error => console.error('Error cargando el archivo JSON:', error));
 });
